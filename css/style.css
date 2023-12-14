@@ -73,6 +73,7 @@ h1 {
 
     .item-category {
         margin-left: 10px;
+        cursor: pointer;
 
     }
 
@@ -232,8 +233,10 @@ h1 {
     text-align: center;
     font-family: "American Typewriter";
     font-size: 30px;
-    background-color: #333333;
+    background-color: grey;
     border: solid white;
+    cursor: pointer;
+
 
 }
 
