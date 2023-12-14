@@ -5,10 +5,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Heloo cursera</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+
+	function load_home() {
+
+		$(document).ready(function(){
+			$('.container').load("/menu/category.html");
+
+		});
+	}
+
+   function openMenu() {
+		var x = document.getElementById("myLinks");
+		if (x.style.display === "block") {
+		x.style.display = "none";
+	} else {
+		x.style.display = "block";
+	}
+	}
+
+</script>
 
 </head>
 <body>
+<div class="header">
+<img src="menu/resturant.png" width="200px" height="200px">
+	<span>Tel : +972520000000</span>
+</div>
 <h1>Our Menu</h1>
+
+<!-- header -->
+
+<div class="menu topnav">
+	<div id="myLinks">
+	<div class="c1 menu-item"> <a href="index.html">menu </a> </div>
+	<div class="c1 menu-item" > <a onclick="load_home()">Chicken </a> </div>
+	<div class=" c1 menu-item" > <a onclick="load_home()">Beef </a> </div>
+	<div class="c1 menu-item" > <a onclick="load_home()">Sushi </a> </div>
+	</div>
+	<a href="javascript:void(0);" class="icon" onclick="openMenu()">
+		<i class="fa fa-bars"></i>
+	</a>
+</div>
 <div class="container">
 	<div class="item">
 		<div class="chicken inner">chicken</div>
