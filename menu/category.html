@@ -24,12 +24,14 @@
         .catch(function (err) {
             console.log('error: ' + err);
         });
-
     function appendData(data) {
-        let mainContainer = document.getElementsByClassName("container");
+        let mainContainer = document.getElementsByClassName("category-container");
         for (let i = 0; i < data.length; i++) {
             let div = document.createElement("div");
-            div.innerHTML = '<span>Chicken1</span>';
+            div.className = 'item-category';
+            div.id = 'category_1';
+            div.innerHTML += "<img src=\"/images/img1.jpg\" width=\"200px\" height=\"100px\" onclick='aa()'>"
+            div.innerHTML += "<span>Chicken1</span>"
             mainContainer[0].appendChild(div);
         }
     }
@@ -40,29 +42,6 @@
 
 
 <div class="category-container">
- <script>
-     fetch('../utils/category.json')
-         .then(function (response) {
-             return response.json();
-         })
-         .then(function (data) {
-             appendData(data);
-         })
-         .catch(function (err) {
-             console.log('error: ' + err);
-         });
-     function appendData(data) {
-         let mainContainer = document.getElementsByClassName("category-container");
-         for (let i = 0; i < data.length; i++) {
-             let div = document.createElement("div");
-             div.className = 'item-category';
-             div.id = 'category_1';
-             div.innerHTML += "<img src=\"/images/img1.jpg\" width=\"200px\" height=\"100px\" onclick='aa()'>"
-             div.innerHTML += "<span>Chicken1</span>"
-             mainContainer[0].appendChild(div);
-         }
-     }
- </script>
 </div>
 
 <div style="display:none;" class="item-description">
