@@ -134,6 +134,12 @@ h1 {
         height: 400px;
     }
 
+
+    .topnav a.icon {
+        display: none;
+
+    }
+
 }
 
 
