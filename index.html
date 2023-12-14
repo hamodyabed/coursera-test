@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Heloo cursera</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" >
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
@@ -17,6 +16,29 @@
 			$('.container').load("/menu/category.html");
 
 		});
+
+
+		fetch('/utils/category.json')
+				.then(function (response) {
+					return response.json();
+				})
+				.then(function (data) {
+					appendData(data);
+				})
+				.catch(function (err) {
+					console.log('error: ' + err);
+				});
+
+		function appendData(data) {
+			let mainContainer = document.getElementsByClassName("category-container");
+			for (let i = 0; i < data.length; i++) {
+				let div = document.createElement("div");
+				div.innerHTML += "<class=\"item-category\" id=\"category_1\" onclick=\"aa()\">"
+				div.innerHTML += "<img src=\"/images/img1.jpg\" width=\"200px\" height=\"100px\">"
+				div.innerHTML += "<span>Chicken1</span>"
+				mainContainer.appendChild(div);
+			}
+		}
 	}
 
    function openMenu() {
@@ -33,7 +55,7 @@
 </head>
 <body>
 <div class="header">
-<img src="menu/resturant.png" width="200px" height="200px">
+<img src="/images/resturant.png" width="200px" height="200px">
 	<span>Tel : +972520000000</span>
 </div>
 <h1>Our Menu</h1>
