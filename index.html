@@ -4,8 +4,71 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Heloo cursera</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" >
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+	<script>
+
+	function load_home() {
+
+		$(document).ready(function(){
+			$('.container').load("menu/category.html");
+
+		});
+
+	}
+
+   function openMenu() {
+		var x = document.getElementById("myLinks");
+		if (x.style.display === "block") {
+		x.style.display = "none";
+	} else {
+		x.style.display = "block";
+	}
+	}
+
+</script>
+
 </head>
 <body>
-<h1>Coursera9</h1>
+<div class="header">
+<img src="images/restaurant.png" width="200px" height="200px">
+	<span>Tel : +972520000000</span>
+</div>
+<h1>Our Menu</h1>
+
+<!-- header -->
+
+<div class="menu topnav">
+	<div id="myLinks">
+	<div class="c1 menu-item"> <a href="index.html">menu </a> </div>
+	<div class="c1 menu-item" ><u> <a onclick="load_home()">Chicken </a> </u></div>
+	<div class=" c1 menu-item" > <u><a onclick="load_home()">Beef </a></u> </div>
+	<div class="c1 menu-item" ><u> <a onclick="load_home()">Sushi </a></u> </div>
+	</div>
+	<a href="javascript:void(0);" class="icon" onclick="openMenu()">
+		<i class="fa fa-bars"></i>
+	</a>
+</div>
+<div class="container">
+	<div class="item">
+		<div class="chicken inner">chicken</div>
+		Borders and Colors: Each section should have a background color set to some color (of your choosing). Set the background color of each section title region to some unique color (of your choosing). Make sure that the background color still allows the user to view the text in the section and section title regions. Depending on the color you choose, you may want to change the color of the text so it can be easy to read. Set a black border on both the section and section title region that is 1px thick. Warning: While not specifying borders and colors according to the requirements does not hurt your grade so much, not doing so will make it much harder for your classmates to peer grade the rest of your assignment, possibly resulting in a much
+	</div>
+
+	<div class="item">
+		<div class="beef inner">beef</div>
+		Borders and Colors: Each section should have a background color set to some color (of your choosing). Set the background color of each section title region to some unique color (of your choosing). Make sure that the background color still allows the user to view the text in the section and section title regions. Depending on the color you choose, you may want to change the color of the text so it can be easy to read. Set a black border on both the section and section title region that is 1px thick. Warning: While not specifying borders and colors according to the requirements does not hurt your grade so much, not doing so will make it much harder for your classmates to peer grade the rest of your assignment, possibly resulting in a much
+
+	</div>
+	<div class="tablet item">
+		<div class="sushi inner">Sushi</div>
+		Borders and Colors: Each section should have a background color set to some color (of your choosing). Set the background color of each section title region to some unique color (of your choosing). Make sure that the background color still allows the user to view the text in the section and section title regions. Depending on the color you choose, you may want to change the color of the text so it can be easy to read. Set a black border on both the section and section title region that is 1px thick. Warning: While not specifying borders and colors according to the requirements does not hurt your grade so much, not doing so will make it much harder for your classmates to peer grade the rest of your assignment, possibly resulting in a much
+
+	</div>
+</div>
+
 </body>
 </html>
